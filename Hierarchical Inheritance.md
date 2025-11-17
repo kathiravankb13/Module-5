@@ -1,3 +1,4 @@
+
 # Exp.No:25  
 ## Hierarchical Inheritance
 
@@ -28,13 +29,41 @@ To write a Python program to get the employee and doctor details and display the
 
 ### PROGRAM
 ```
-
-
+class A:
+    def data(self):
+        self.idd = int(input())
+        self.name = input()
+        self.gen = input()
+        self.comp = input()
+        self.dept = input()
+class B(A):
+    def display1(self):
+        A.data(self)
+        print("Doctor Object")
+        print("Id: ",self.idd)
+        print("Name: ",self.name)
+        print("Gender: ",self.gen)
+        print("Hospital: ",self.comp)
+        print("Department: ",self.dept)
+        print("")
+class C(B):
+    def display2(self):
+        A.data(self)
+        print("Patient Object")
+        print("Id: ",self.idd)
+        print("Name: ",self.name)
+        print("Gender: ",self.gen)
+        print("Hospital: ",self.comp)
+        print("Department: ",self.dept)
+obj = C()
+objj = B()
+objj.display1()
+obj.display2()
 ```
 
 ### OUTPUT  
 
-(Output Screenshot)  
-
-
+![image](https://github.com/user-attachments/assets/1201879c-3d25-489e-8f4c-4f721c370f5f)
+ 
 ### RESULT
+Thus the Python program to get the employee and doctor details and display them using hierarchical inheritance. Create a parent (base) class named `Details` and two child (derived) classes named `Employee` and `Doctor` is successfully executed. 
